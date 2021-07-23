@@ -1,0 +1,21 @@
+{
+  "name": "dadash",
+  "version": "1.0.0",
+  "description": "A command line interface for React Dashboard Admin",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruce Guenkam",
+  "license": "MIT",
+  "bin": {
+    "hello": "./bin/index.js"
+  },
+  "dependencies": {
+    "boxen": "4.0",
+    "chalk": "2.4",
+    "routes": "^2.1.0",
+    "validate.js": "^0.13.1",
+    "yargs": "13.2"
+  }
+}
