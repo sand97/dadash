@@ -1,0 +1,22 @@
+import produce from 'immer';
+import {ApplicationAction} from 'store/types';
+import {cli_state_type} from 'store/types';
+//cli_import_section
+
+
+const initialState: cli_state_type = {
+
+}
+
+
+const reducer = (state = initialState, action: ApplicationAction) => {
+  switch (action.type) {
+//cli_use_cases_section
+
+    default: {
+      return state;
+    }
+  }
+};
+
+export default reducer;

@@ -1,0 +1,3 @@
+    case cli_use_action_name: {
+      return state
+    }

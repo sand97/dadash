@@ -1,0 +1,9 @@
+import { Action } from 'redux';
+
+
+//cli_export_interface_section
+
+
+export interface cli_state_type {
+
+}

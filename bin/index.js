@@ -1,7 +1,13 @@
 #!/usr/bin/env node
+const Router = require('routes');
+const router = Router();
+const validate = require('validate.js')
+
 const yargs = require("yargs");
 const chalk = require("chalk");
 const boxen = require("boxen");
+const routes = require('../core/routes')
+
 //
 // const greeting = chalk.white.bold("Hello!");
 //
@@ -17,25 +23,31 @@ const boxen = require("boxen");
 // console.log(msgBox);
 
 
-const options = yargs
-    .usage("Usage: hello <command> [OPTIONS]")
-    .command("make", "Create a new resource like actions, services and other", (yargs, help) => {
-        return yargs
-            .command('reducer', `Create reducer in ${chalk.blue('reducer')} folder`, {
-                name: {
-                    alias: "n",
-                    describe: `Eg. ${chalk.blue('-n Chat')} to create ${chalk.blue("ChatReducer.tsx")} file`,
-                    type: "string",
-                    demandOption: true
-                },
-                action: {
-                    alias: "a",
-                    describe: `Eg. ${chalk.blue('-a AddMessage')} to create ${chalk.blue("AddMessageAction")}`,
-                    type: "string"
-                },
-            })
-    })
-    .command("update", "Update a resource like actions, services and other")
-    .argv;
+const options = require('../core/command')
+const link = `/${options._.join('/')}`;
+const matchRoute = (scheme, handler) => {
+    const {_, $0, ...args} = options;
+    const errors = validate(args, scheme);
+    if (errors) {
+        let error = "";
+        Object.keys(errors).forEach(key => {
+            error += `--${key} : ${errors[key].join(', ')}`
+        })
+        console.log(chalk.red(error));
+    }else{
+        handler(args);
+    }
+}
 
-console.log(options);
+routes.map(r => {
+    router.addRoute(r.url, () => matchRoute(r.scheme, r.handler));
+});
+
+const match = router.match(link);
+if (!match)
+    console.error(chalk.red('No command found'));
+else
+    match.fn();
+
+
+console.log(options._);

@@ -1,0 +1,5 @@
+
+export const cli_action_func = (data: cli_action_params): cli_action_interface => ({
+   type: cli_action_title,
+   data
+});

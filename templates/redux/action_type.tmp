@@ -1,0 +1,4 @@
+export interface cli_action_interface extends Action {
+  type: typeof cli_action_title,
+  data: cli_action_params
+}
