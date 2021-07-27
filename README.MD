@@ -1,29 +1,32 @@
-**Dadash**
-A ClI to manage easily with Redux and Http service structure
+**<h1>Dadash</h1>**
+<p>A ClI to manage easily with Redux and Http service structure</p>
 
-in the src folder of your project create is don't exist a store structure based on store `example`
+<p>in the src folder of your project create is don't exist a store structure based on store 
+<a>example</a>
+</p>
 
-**Installation**
-git clone https://gitlab.com/speading_traking/react-cli.git dadash
-cd dadash 
-npm install -g .
+<h2>**Installation**</h2>
+git clone https://gitlab.com/speading_traking/react-cli.git dadash<br/>
+cd dadash <br/>
+npm install -g .<br/>
 
-**Help**
-dadash --help
-dadash make --help
-dadash make reducer --help
+<h2>**Usage**</h2>
+<h3>**Help**</h3>
+dadash --help<br/>
+dadash make --help<br/>
+dadash make reducer --help<br/>
 ...
 
-**1-Create reducer**
-In the root of your projet, exec
+<h3>**1-Create reducer**</h3>
+In the root of your projet, exec <br/>
 dadash make reducer --name ReducerName
 
-**2-Create action in reducer**
+<h3>**2-Create action in reducer**</h3>
 In the root of your projet, exec
 dadash make action --name Test --reducer ReducerName
 
-**3-Create service**
+<h3>**3-Create service**</h3>
 Commin soon
 
-**4-Create request in service**
+<h3>**4-Create request in service**</h3>
 Commin soon
