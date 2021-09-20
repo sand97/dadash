@@ -59,7 +59,7 @@ module.exports = (params) => {
     types_content = types_content.replace('//cli_application_state_section', `//cli_application_state_section\n\t${params.name.toLowerCase()} : ${state},`)
     types_content = types_content.replace('//cli_import_section', `//cli_import_section\nimport {${state}} from 'store/types';`)
     reducers_content = reducers_content.replace('//cli_import_section', `//cli_import_section\nimport ${reducer} from './reducers/${reducer}';`)
-    reducers_content = reducers_content.replace('//cli_reducer_section', `//cli_reducer_section\n\t${params.name.toLowerCase()} : ${reducer}`)
+    reducers_content = reducers_content.replace('//cli_reducer_section', `//cli_reducer_section\n\t${params.name.toLowerCase()} : ${reducer},`)
     reducer_content = reducer_content.replace(/cli_state_type/g, state)
     actions_content = actions_content.replace('//cli_export_section', `export * from 'store/actions/${action}';`)
     // console.log('type file content\n', type_content);

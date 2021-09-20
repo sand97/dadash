@@ -6,7 +6,7 @@ const path = require('path');
 exports.checkReduxFolderStructure = () => {
     try {
         fs.readdirSync(path.join(process.cwd(), 'src', 'store', 'actions'));
-        fs.readdirSync(path.join(process.cwd(), 'src', 'store', 'effect'));
+        fs.readdirSync(path.join(process.cwd(), 'src', 'store', 'effects'));
         fs.readdirSync(path.join(process.cwd(), 'src', 'store', 'reducers'));
         fs.readdirSync(path.join(process.cwd(), 'src', 'store', 'actions'));
     } catch (e) {

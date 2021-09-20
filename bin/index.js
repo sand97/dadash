@@ -49,5 +49,3 @@ if (!match)
 else
     match.fn();
 
-
-console.log(options._);
