@@ -19,14 +19,16 @@ dadash make reducer --help<br/>
 
 <h3>1-Create reducer</h3>
 In the root of your projet, exec <br/>
-dadash make reducer --name ReducerName
+dadash make reducer --name Calendar<br/>
+this will create CalendarReducer
 
 <h3>2-Create action in reducer</h3>
-In the root of your projet, exec
-dadash make action --name Test --reducer ReducerName
-
+In the root of your projet, exec<br/>
+dadash make action --name SET_EVENT_LIST --reducer Calendar<br/>
+this will create setListEventsAction action<br/>
+<b>NB: please respect uppercase in event name</b>
 <h3>3-Create service</h3>
-Commin soon
+Coming soon
 
 <h3>4-Create request in service</h3>
-Commin soon
+Coming soon
