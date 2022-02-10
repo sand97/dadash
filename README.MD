@@ -8,6 +8,7 @@
 <h2>I. Installation</h2>
 git clone https://gitlab.com/speading_traking/react-cli.git dadash<br/>
 cd dadash <br/>
+npm install<br/>
 npm install -g .<br/>
 
 <h2>II. Usage</h2>
